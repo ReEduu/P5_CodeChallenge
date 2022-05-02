@@ -7,6 +7,16 @@ describe("Unit test for Student Controller Class",()=>{
         expect(emails[1]).toBe("Sexton@visualpartnership.xyz");
     })
 
+    test("Return the list of students",()=>{
+        students = StudentController.getStudents();
+        expect(students[0].name).toBe("Warren");
+        expect(students[0].email).toBe("Todd@visualpartnership.xyz");
+        expect(students[0].credits).toBe(508);
+        expect(students[0].enrollments[0]).toBe("Visual Thinking Intermedio");
+        expect(students[0].previousCourses).toBe(1);
+        expect(students[0].haveCertification).toBe(true);
+    })
+
     test("Return the list of user with credits > 500",()=>{
         creditStudents = StudentController.getValidCreditStudents();
         expect(creditStudents.length).toBe(27);
