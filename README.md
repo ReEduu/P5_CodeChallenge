@@ -1,12 +1,12 @@
 # P5_CodeChallenge
 En este repo se encuentra la práctica 5 de la semana 4
 
-Dependencias usadas:
+**Dependencias usadas**
 - Jest : Se uso para realizar las pruebas cada una de las clases del proyecto
 - Linter: Se uso para las correciones de estilo 
 - Express Server: Para crear el server dentro del cual se llevan a cabo los diferentes endpoints
 
-Componentes:
+**Componentes**
 Para el diseño me basé en el ejemplo realizado en la práctica 4 y que sin darme cuenta es prácticamente el mismo que
 se encuentra en la ilustración de la práctica 5
 En total tenemos
@@ -20,11 +20,11 @@ Cada una de estas clases cuenta con sus respectivas pruebas, las cuales se puede
 
 - Finalmente tenemos el server con la API, y sus respectivos endpoints
 
-API:
+**API**
 Esta API cuenta con 3 endpoints, cada uno con el método GET de HTTP, tiene un funcionamiento muy sencillo, ya que dependiendo de la
 URL a la cual se acceda, te devolverá un conjunto de valores u otro, en total se tiene a los tres endpoints que se solicitaron
 
-Si de accede a
+Si se accede a
 
 - localhost:3000/v1/students/emails. Entonces se mandará a llamar al método getStudentEmails() de la clase StudentController
 y el resultado se mostrará con response
