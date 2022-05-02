@@ -1,12 +1,13 @@
 const Reader = require("./../../lib/utils/Reader");
 
 describe("Unit test for User Reader",()=>{
-    test("Return the list of explorers antes test the first explorer",()=>{
-        const explorers = Reader.readJsonFile("explorers.json");
-        expect(explorers[0].name).toBe("Woopa1");
-        expect(explorers[0].githubUsername).toBe("ajolonauta1");
-        expect(explorers[0].score).toBe(1);
-        expect(explorers[0].mission).toBe("node");
-        expect(explorers[0].stacks[0]).toBe("javascript");
+    test("Return the list of students and test the first student",()=>{
+        const students = Reader.readJsonFile("visualpartners.json");
+        expect(students[0].name).toBe("Warren");
+        expect(students[0].email).toBe("Todd@visualpartnership.xyz");
+        expect(students[0].credits).toBe(508);
+        expect(students[0].enrollments[0]).toBe("Visual Thinking Intermedio");
+        expect(students[0].previousCourses).toBe(1);
+        expect(students[0].haveCertification).toBe(true);
     });
 });
