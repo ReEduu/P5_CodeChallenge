@@ -1,14 +1,12 @@
 const Reader = require("./../../lib/utils/Reader");
-const ExplorerService = require("./../../lib/services/ExplorerService");
+const StudentService = require("./../../lib/services/StudentService");
 
 describe("Unit test for User Reader",()=>{
-    test("Return the list of explorers antes test the first explorer",()=>{
-        const explorers = Reader.readJsonFile("explorers.json");
-        const nodeExplorers = ExplorerService.filterByMission(explorers, "node");
-        const nodeAmount = ExplorerService.getAmountOfExplorersByMission(explorers, "node");
-        const nodeUsernames=ExplorerService.getExplorersUsernamesByMission(explorers, "node");
-        expect(nodeExplorers[0].name).toBe("Woopa1");
-        expect(nodeAmount).toBe(10);
-        expect(nodeUsernames[0]).toBe("ajolonauta1");
-    });
+    
+    test("Return the list of emails",()=>{
+        const students = Reader.readJsonFile("visualpartners.json");
+        emails = StudentService.getEmails(students);
+        expect(emails[0]).toBe("Todd@visualpartnership.xyz");
+        expect(emails[1]).toBe("Sexton@visualpartnership.xyz");
+    })
 });
