@@ -9,4 +9,10 @@ describe("Unit test for User Reader",()=>{
         expect(emails[0]).toBe("Todd@visualpartnership.xyz");
         expect(emails[1]).toBe("Sexton@visualpartnership.xyz");
     })
+
+    test("Return the list of user with credits > 500",()=>{
+        const students = Reader.readJsonFile("visualpartners.json");
+        creditStudents = StudentService.getCreditStudents(students);
+        expect(creditStudents.length).toBe(27);
+    })
 });

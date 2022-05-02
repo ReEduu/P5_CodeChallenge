@@ -1,4 +1,4 @@
-const ExplorerController = require("./../../lib/controllers/ExplorerController");
+const StudentController = require("./../../lib/controllers/StudentController");
 
 describe("Unit test ExplorarController Class",()=>{
     test("evaluate getExplorersAmountByMission method",()=>{
